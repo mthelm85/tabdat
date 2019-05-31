@@ -1,0 +1,22 @@
+{
+  "name": "tabdat",
+  "version": "1.0.0",
+  "description": "Process tabular data efficiently and easily.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tabular",
+    "data",
+    "data",
+    "processing",
+    "data",
+    "wrangling"
+  ],
+  "author": "Matt Helm",
+  "license": "ISC",
+  "dependencies": {
+    "papaparse": "^5.0.0"
+  }
+}
