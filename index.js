@@ -91,3 +91,8 @@ class TabDat {
     }
   }
 }
+
+module.exports = {
+  convert,
+  TabDat
+}
