@@ -30,11 +30,14 @@ Note that all methods are chainable.
 
 ### Available Methods
 
+#### Convert
+
 ```javascript
 convert(filepath)
 ```
 Converts a CSV file to JSON for further processing. ```filepath``` is a string pointing to the correct location. Returns a promise with the converted data.
 ______________________________________________________________________________________________
+#### Add a new column
 ```javascript
 addCol(name, userFunction)
 ```
@@ -49,6 +52,7 @@ addCol('myNewCol', row => row.mpg * 2)
 
 This will create a new row called ```myNewCol``` and the values in this column will be the product of the value in the ```mpg``` column and 2.
 ________________________________________________________________________________________________
+#### Add a new row
 ```javascript
 addRow(row)
 ```
@@ -65,6 +69,7 @@ addRow({
 ```
 Note: The keys of the object must match those that are already in the data (i.e. you can't add a new column this way, use ```addCol``` for that).
 __________________________________________________________________________________________________
+#### Delete a column
 ```javascript
 deleteCol(colNames)
 ```
@@ -75,6 +80,7 @@ For example:
 deleteCol(['mpg', 'numCylinders'])
 ```
 __________________________________________________________________________________________________
+#### Filter the data
 ```javascript
 filter(userFunction)
 ```
@@ -85,16 +91,19 @@ For example:
 filter(row => row.mpg > 30)
 ```
 __________________________________________________________________________________________________
+#### Print the column names to the console
 ```javascript
 printColNames()
 ```
 Prints to the console an array containing all of the current column names (object keys) in the data.
 ___________________________________________________________________________________________________
+#### Print the data as a table to the console
 ```javascript
 printTable()
 ```
 Prints the data to the console in a tabular format.
 ___________________________________________________________________________________________________
+#### Rename a column
 ```javascript
 renameCol(oldColName, newColName)
 ```
@@ -106,6 +115,7 @@ renameCol('countryOfOrigin', 'country')
 ```
 This will change the name of the column ```countryOfOrigin``` to ```country```.
 ___________________________________________________________________________________________________
+#### Save the data to a CSV file
 ```javascript
 save(filepath)
 ```
@@ -116,11 +126,13 @@ For example:
 save('path/to/save/to.csv')
 ```
 __________________________________________________________________________________________________
+#### Get the number of rows and columns (printed to the console)
 ```javascript
 size()
 ```
 Prints to the console the current number of rows/columns the data consists of.
 __________________________________________________________________________________________________
+#### Sort the data
 ```javascript
 sortBy(criteria)
 ```
