@@ -19,8 +19,8 @@ The standard workflow looks like this:
 ```javascript
 const TabDat = require('tabdat')
 
-convert('/path/to/file.csv').then(data => {
-  td = new TabDat(data)
+TabDat.convert('/path/to/file.csv').then(data => {
+  td = new TabDat.TabDat(data)
   td.sortBy(row => row.mpg)
     .filter(row => countryOfOrigin === 'USA')
     .printTable()
