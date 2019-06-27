@@ -17,6 +17,8 @@
   "author": "Matt Helm",
   "license": "ISC",
   "dependencies": {
+    "console.table": "^0.10.0",
+    "lodash": "^4.17.11",
     "papaparse": "^5.0.0"
   }
 }
