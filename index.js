@@ -91,24 +91,3 @@ class TabDat {
     }
   }
 }
-
-convert('./iris.csv').then(data => {
-  const td = new TabDat(data)
-  td.sortBy(['species', 'sepal_width'])
-    // .filter(row => row.sepal_length > 7)
-    // .addCol('petal_area', row => row.petal_length * row.petal_width)
-    // .addCol('sepal_area', row => row.sepal_length * row.sepal_width)
-    // .deleteCol(['petal_length'])
-    // .renameCol('petal_area', 'my_petal_area') // need to make this update meta.fields
-    // .addRow({
-    //   sepal_length: 7.8,
-    //   sepal_width: 3.4,
-    //   petal_length: 6.2,
-    //   petal_width: 2.2,
-    //   species: 'virginica',
-    //   my_petal_area: 14,
-    //   sepal_area: 16
-    // })
-    .printTable()
-    // .save('./filtered.csv')
-})
